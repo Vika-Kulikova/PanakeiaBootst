@@ -1,0 +1,46 @@
+.navbar {
+  background-color: $backgroundSection;
+  min-height: 145px;
+  .navbar-brand {
+    @include display-flex;
+    @include flex-direction(column);
+  }
+  &-brand-title {
+    font-weight: 700;
+    font-size: $fontSizeLogo;
+    color: $textColorDark;
+    line-height: $fontSizeLogo;
+  }
+  &-brand-title-small {
+    color: $buttonHover;
+  }
+  .collapse {
+    flex-grow: 0;
+  }
+  .nav-item {
+    border: 1px solid transparent;
+    @include border-radius(30px);
+    @include transition-duration(0.3s);
+    &:hover {
+      background-color: $buttonHover;
+      border: 1px solid $buttonHover;
+      .nav-link {
+        color: $backgroundSection;
+      }
+    }
+  }
+  .nav-link {
+    color: $textColorDark;
+    font-size: $fontSizeNav;
+    line-height: 16px;
+    @include transition-duration(0.3s);
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 16px 20px;
+}
+
+.navbar-toggler {
+  border-color: $textColorDark;
+}

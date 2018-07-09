@@ -1,0 +1,72 @@
+.container-newsLetter {
+  background-image: image-url("bg-newsLetter.jpg");
+  @extend .image-param;
+  height: 383px;
+  color: $textColorLight;
+  .content-newsLetter {
+    min-height: 383px;
+  }
+  .content-title {
+    max-width: 580px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 24px;
+    }
+  }
+}
+.form-newsletter {
+  background-image: image-url("bg-form.png");
+  max-width: 520px;
+  border: 1px solid $borderForm;
+  @include border-radius(40px);
+  @include transition-duration(0.3s);
+  input {
+    border: none;
+    background: none;
+    padding-left: 40px;
+    color: $textColorForm;
+    font-size: $fontSizeNav;
+    outline: none;
+    font-weight: 400;
+    &:focus {
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      color: $textColorForm;
+      font-weight: 400;
+    }
+  }
+  .btn-form {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid $borderForm;
+    border-right: none;
+  }
+
+  @include breakpoint($fence-xs-md) {
+    @include flex-direction(column);
+    margin: 0 auto;
+    background-image: none;
+    border: none;
+    input {
+      background: image-url("bg-form.png");
+      max-width: 520px;
+      height: 59px;
+      border: 1px solid $borderForm;
+      @include border-radius(40px);
+      margin-bottom: $marginBotContentItem;
+      &:focus {
+        border: 1px solid $borderForm;
+        background: image-url("bg-form.png");
+      }
+    }
+    .btn-form {
+       border: 1px solid $borderForm;
+
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+//font-family: 'Roboto', sans-serif;
+//font-family: 'Roboto Slab', serif;
+
+body {
+  font-family: 'Roboto Slab', "Arial", serif;
+  font-weight: 300;
+  font-size: $baseFontSize;
+  line-height: $lineHeightP;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: $fontSizeh2;
+  line-height: 24px;
+}

@@ -1,0 +1,22 @@
+.content-item-text {
+  max-width: 580px;
+  .btn-regular {
+    background-color: $buttonProductColor;
+    color: $backgroundButton;
+    border: 2px solid transparent;
+    &:before {
+      background: $buttonHover;
+
+    }
+  }
+}
+.content-item:nth-child(2n+1) {
+  @include flex-direction(row-reverse);
+  .btn-regular {
+    background-color: $buttonHover;
+    &:before {
+      background: $buttonProductColor;
+      color: $buttonHover;
+    }
+  }
+}

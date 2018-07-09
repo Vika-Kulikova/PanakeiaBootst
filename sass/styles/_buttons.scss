@@ -1,0 +1,67 @@
+.btn {
+  @include border-radius(40px);
+  background-color: $backgroundButton;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include scaleX(0);
+    @include transform-origin (100%, 0);
+    @include transition-duration(0.3s);
+    @include transition-property(transform);
+    @include transition-timing-function (ease-out);
+    //transform: scaleX(0);
+    //transform-origin: 100% 0;
+    //transition-property: transform;
+    //transition-duration: .3s;
+    //transition-timing-function: ease-out;
+  }
+  &:hover {
+    &:before {
+      @include scaleX(1);
+      @include transform-origin (0, 100%);
+      //transform: scaleX(1);
+      //transform-origin: 0 100%;
+    }
+  }
+}
+
+.btn-light {
+  padding: 1rem 3.33333rem;
+  font-size: $baseFontSize;
+  font-weight: 300;
+  color: $textColorButton;
+  position: static;
+  margin-top: 24px;
+  &:hover {
+    border: 1px solid $textColorButton;
+    transition-duration: .3s;
+    background-color: $backgroundButton;
+    &:before {
+      transform: scaleX(0);
+    }
+  }
+}
+
+.btn-regular {
+  color: $textColorButtonRegular;
+  font-weight: 400;
+  padding: 1rem 4.666667rem;
+  border: 1px solid $textColorButtonRegular;
+  font-size: $fontSizeNav;
+  &:before {
+    background: $textColorButtonRegular;
+  }
+  &:hover {
+    color: $textColorLight;
+    border: 1px solid transparent;
+  }
+}
+

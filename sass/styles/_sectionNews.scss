@@ -1,0 +1,16 @@
+.container-news {
+  background-color: $backgroundSection;
+  .box-centered {
+    min-height: 785px;
+  }
+  .content-title {
+    margin-top: $marginTopGlobal;
+    @include breakpoint($fence-sm) {
+      margin-bottom: 50px;
+    }
+    @include breakpoint($fence-xs) {
+      margin-bottom: 50px;
+    }
+  }
+}
+

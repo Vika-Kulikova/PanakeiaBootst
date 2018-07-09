@@ -1,0 +1,39 @@
+.footer-categories {
+  //min-height: 405px;
+  background-color: $backgroundFooter;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    color: $textColorLight;
+    font-weight: 400;
+    font-size: $fontSizeNav;
+    line-height: 36px;
+  }
+  .container-categories {
+    min-height: 405px;
+  }
+  .category {
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+
+.footer-copyright {
+  background-image: image-url("bg-newsLetter.jpg");
+  @extend .image-param;
+  height: 383px;
+  color: $textColorLight;
+  padding-top: 85px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  p {
+    margin: 0;
+    font-size: $fontSizeNav;
+  }
+  a {
+    color: $textColorLight;
+    font-weight: 400;
+  }
+}
